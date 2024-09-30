@@ -1,5 +1,5 @@
 {
-  "name": "@amicaldo/capacitor-kiosk",
+  "name": "@amicaldo/capacitor-plugin-kiosk",
   "version": "1.0.0",
   "description": "Android kiosk mode for capacitor",
   "main": "dist/plugin.cjs.js",
