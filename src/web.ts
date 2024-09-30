@@ -1,6 +1,6 @@
 import { WebPlugin } from '@capacitor/core';
 
-import { KioskModePlugin, KioskModeStatus } from './definitions';
+import type { KioskModePlugin, KioskModeStatus } from './definitions';
 
 export class KioskModeWeb extends WebPlugin implements KioskModePlugin {
 	async isInKioskMode(): Promise<KioskModeStatus> { return Promise.resolve({ value: true }); }
