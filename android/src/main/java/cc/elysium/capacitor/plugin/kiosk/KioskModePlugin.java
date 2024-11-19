@@ -2,6 +2,7 @@ package cc.elysium.capacitor.plugin.kiosk;
 
 import android.app.ActivityManager;
 import android.app.admin.DevicePolicyManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
