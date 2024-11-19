@@ -1,5 +1,5 @@
 {
-  "name": "@amicaldo/capacitor-plugin-kiosk",
+  "name": "@strike56/capacitor-plugin-kiosk",
   "version": "1.0.0",
   "description": "Android kiosk mode for capacitor",
   "main": "dist/plugin.cjs.js",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/10goC/capacitor-plugin-kiosk.git"
+    "url": "git+https://github.com/strike56/capacitor-plugin-kiosk"
   },
   "bugs": {
     "url": "https://github.com/10goC/capacitor-plugin-kiosk/issues"

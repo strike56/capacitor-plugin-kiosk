@@ -5,7 +5,7 @@ Android kiosk mode for capacitor
 ## Install
 
 ```bash
-npm install capacitor-kiosk
+npm install https://github.com/strike56/capacitor-plugin-kiosk
 npx cap sync
 ```
 
