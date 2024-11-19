@@ -7,4 +7,5 @@ export class KioskModeWeb extends WebPlugin implements KioskModePlugin {
 	async enterKioskMode(): Promise<void> { return Promise.resolve(); }
 	async exitKioskMode(): Promise<void> { return Promise.resolve(); }
 	async toggleKioskMode(): Promise<void> { return Promise.resolve(); }
+	async test(): Promise<void> { return Promise.resolve(); }
 }

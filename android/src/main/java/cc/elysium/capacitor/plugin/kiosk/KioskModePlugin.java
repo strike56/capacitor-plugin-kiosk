@@ -48,14 +48,20 @@ public class KioskModePlugin extends Plugin {
 	@PluginMethod
 	public void enterKioskMode(PluginCall call) {
 		Log.i(TAG, "Entering Kiosk Mode");
+		getActivity().startLockTask();
+		call.resolve();
+	}
+
+	@PluginMethod
+	public void test(PluginCall call) {
+		Log.i(TAG, "Test");
 		Context context = getContext();
 		DevicePolicyManager dpm =
 				(DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
 		ComponentName adminName = new ComponentName(context.getApplicationContext(), KioskModePlugin.class);
 		dpm.setLockTaskFeatures(adminName,
-			DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO
+				DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO
 		);
-		getActivity().startLockTask();
 		call.resolve();
 	}
 
