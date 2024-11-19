@@ -1,6 +1,7 @@
 package cc.elysium.capacitor.plugin.kiosk;
 
 import android.app.ActivityManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
@@ -46,6 +47,13 @@ public class KioskModePlugin extends Plugin {
 	@PluginMethod
 	public void enterKioskMode(PluginCall call) {
 		Log.i(TAG, "Entering Kiosk Mode");
+		Context context = getContext();
+		DevicePolicyManager dpm =
+				(DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+		ComponentName adminName = getComponentName(context);
+		dpm.setLockTaskFeatures(adminName,
+			DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO
+		);
 		getActivity().startLockTask();
 		call.resolve();
 	}
