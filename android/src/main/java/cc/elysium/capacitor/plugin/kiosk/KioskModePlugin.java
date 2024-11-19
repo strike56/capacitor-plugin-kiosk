@@ -51,7 +51,7 @@ public class KioskModePlugin extends Plugin {
 		Context context = getContext();
 		DevicePolicyManager dpm =
 				(DevicePolicyManager) context.getSystemService(Context.DEVICE_POLICY_SERVICE);
-		ComponentName adminName = ComponentName(context.applicationContext, KioskModePlugin::class.java);
+		ComponentName adminName = ComponentName(context.getApplicationContext(), KioskModePlugin.class);
 		dpm.setLockTaskFeatures(adminName,
 			DevicePolicyManager.LOCK_TASK_FEATURE_SYSTEM_INFO
 		);
